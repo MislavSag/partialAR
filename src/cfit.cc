@@ -19,6 +19,8 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
+const double PI = std::atan(1.0)*4;
+
 // [[Rcpp::export]]
 double lagged_variance_c (NumericVector X, int k, int n) {
     // Computes the variance of (1-B^k)X[(k+1)..n]
